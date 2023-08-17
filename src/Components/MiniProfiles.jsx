@@ -1,8 +1,50 @@
+"use client";
+
+import { signOut, useSession } from "next-auth/react";
+import Spninner from "./Spninner";
 
 const MiniProfiles = () => {
-  return (
-    <div className="bg-orange-500"><p className="text-center text-black font-semibold">MiniProfiles: Hridoy Vai</p></div>
-  )
-}
+  const session = useSession();
 
-export default MiniProfiles
+  if (session.status === "loading") {
+    return <Spninner />;
+  }
+
+const user = session?.data?.user;
+const userName = user?.name;
+const userImg = user?.image;
+
+
+  return (
+    <div className="flex items-center justify-between mt-14 ml-10 mb-6">
+      <img
+        className="w-14 h-14 rounded-full border p-[2px] cursor-pointer"
+        src={userImg}
+        alt=""
+      />
+
+      <div className="flex-1 mx-4 ">
+        <h2 className="font-bold cursor-pointer">{userName}</h2>
+        <h3 className="text-sm cursor-default">Good day!</h3>
+      </div>
+
+      {session.status === "authenticated" && (
+        <button onClick={signOut} className="text-red-400 text-sm font-semibold">Sign Out</button>
+      )}
+    </div>
+  );
+};
+
+export default MiniProfiles;
+
+
+
+  // <button
+  //   onClick={() => {
+  //     signIn("google");
+  //   }}
+  //   className="text-blue-400 text-sm font-semibold"
+  // >
+  //   Log In
+  // </button>
+
