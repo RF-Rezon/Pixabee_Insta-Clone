@@ -6,6 +6,7 @@ import { FaHistory } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import ProfilePosts from "./ProfilePosts";
 import ProfileStories from "./ProfileStories";
+import Stories from './ProfileStories.json';
 const ProfileSection = () => {
   const session = useSession();
   const userImg = session?.data?.user.image;
@@ -26,7 +27,7 @@ const ProfileSection = () => {
 
           <div className="mt-4 flex">
             <div>
-              <span className="font-semibold">150</span> posts
+              <span className="font-semibold">{Stories.length}</span> posts
             </div>
             <div className="ml-4">
               <span className="font-semibold">200</span> followers

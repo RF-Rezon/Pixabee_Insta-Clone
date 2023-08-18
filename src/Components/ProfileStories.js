@@ -8,8 +8,7 @@ const ProfileStories = () => {
                 {Stories.map(story => <ProfileStory
                     key={story.id}
                     img={story.image}
-                    username={story.first_name + story.last_name}
-                />)}
+                    username={story.first_name + story.last_name}/>)}
             </div>
             <div className='absolute top-0 p-4 w-full flex justify-between z-10 items-center'>
                 <BiLeftArrowAlt color='white' className='cursor-pointer drop-shadow-lg' />

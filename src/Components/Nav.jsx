@@ -24,13 +24,13 @@ const Nav = () => {
       <div className="flex justify-between items-center sm:max-w-2xl md:max-w-6xl mx-auto ">
         {/* Left  */}
         <div className="relative">
-          <div className="hidden lg:inline-block absolute -top-4 h-24 w-24">
-            <img src="https://links.papareact.com/ocw" className="object-contain" alt="Img logo Name" />
+          <div className="hidden lg:block absolute -top-[68px] h-44 w-44">
+            <img src="https://i.ibb.co/G9NgcW9/logo-removebg-preview.png" className="object-contain" alt="Img logo Name" />
           </div>
           <div className="relative lg:hidden h-7 w-7 ml-4">
             <img
               onClick={() => router.push("/")}
-              src="https://links.papareact.com/jjm"
+              src="https://i.ibb.co/tbMd05z/swarm.png"
               className="object-contain"
               alt="Img logo"
             />
