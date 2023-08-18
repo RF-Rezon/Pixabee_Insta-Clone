@@ -36,21 +36,39 @@
 
 // Stack overflow
 
-import NextAuth, { AuthOptions } from "next-auth";
+// import NextAuth, { AuthOptions } from "next-auth";
+// import GoogleProvider from "next-auth/providers/google";
+
+// /* You shouldn't export authOptions in API route.ts / route.js file.
+//  This is the cause of error!! */
+
+// export const authOptions: AuthOptions = {
+//   providers: [
+//     GoogleProvider({
+//       clientId: process.env.GOOGLE_CLIENT_ID as string,
+//       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+//     }),
+//   ],
+// };
+
+// const handler = NextAuth(authOptions);
+
+// export { handler as GET, handler as POST };
+
+// Next js website
+
+import type { NextAuthOptions } from "next-auth";
+import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
-/* You shouldn't export authOptions in API route.ts / route.js file.
- This is the cause of error!! */
-
-export const authOptions: AuthOptions = {
+export const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
 };
 
 const handler = NextAuth(authOptions);
-
 export { handler as GET, handler as POST };
