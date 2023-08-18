@@ -1,19 +1,19 @@
-// import NextAuth from "next-auth";
-// import GoogleProvider from "next-auth/providers/google";
+import NextAuth from "next-auth";
+import GoogleProvider from "next-auth/providers/google";
 
-// export const authOptions = NextAuth({
-//   // Configure one or more authentication providers
-//   providers: [
-//     GoogleProvider({
-//       clientId: process.env.GOOGLE_CLIENT_ID,
-//       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-//     }),
-//     // ...add more providers here
-//   ],
-//   secret: process.env.NEXT_AUTH_SECRET,
-// });
+const authOptions = NextAuth({
+  // Configure one or more authentication providers
+  providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    }),
+    // ...add more providers here
+  ],
+  secret: process.env.NEXT_AUTH_SECRET,
+});
 
-// export { authOptions as GET, authOptions as POST };
+export { authOptions as GET, authOptions as POST };
 
 // Chat gpt code:
 
@@ -57,18 +57,18 @@
 
 // Next js website
 
-import type { NextAuthOptions } from "next-auth";
-import NextAuth from "next-auth";
-import GoogleProvider from "next-auth/providers/google";
+// import type { NextAuthOptions } from "next-auth";
+// import NextAuth from "next-auth";
+// import GoogleProvider from "next-auth/providers/google";
 
-export const authOptions: NextAuthOptions = {
-  providers: [
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-    }),
-  ],
-};
+// export const authOptions: NextAuthOptions = {
+//   providers: [
+//     GoogleProvider({
+//       clientId: process.env.GOOGLE_CLIENT_ID!,
+//       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+//     }),
+//   ],
+// };
 
-const handler = NextAuth(authOptions);
-export { handler as GET, handler as POST };
+// const handler = NextAuth(authOptions);
+// export { handler as GET, handler as POST };
