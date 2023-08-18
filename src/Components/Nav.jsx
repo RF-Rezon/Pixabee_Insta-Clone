@@ -67,7 +67,7 @@ const Nav = () => {
               <HiOutlineUserGroup className="navBtn" />
               <HiOutlineHeart className="navBtn" />
               
-                <img src={userImg} alt="" className="h-7 w-7 rounded-full cursor-pointer" />
+                <img onClick={() => router.push("/UserProfile")} src={userImg} alt="" className="h-7 w-7 rounded-full cursor-pointer" />
              
             </>
           ) : (

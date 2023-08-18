@@ -20,7 +20,7 @@ const Feed = () => {
     {session.status === 'authenticated' && (
       <section className='col-span-1 hidden xl:inline-grid md:col-span-1 w-full'>
         {/* Mini Profile */}
-        <div className='fixed top-20'>
+        <div className='fixed top-15'>
           <MiniProfiles />
           <Suggestions />
         </div>
