@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  secret: process.env.NEXT_SECRET,
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/Components/**/*.{js,ts,jsx,tsx,mdx}',
