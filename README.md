@@ -1,6 +1,8 @@
 # PixaBee - ( Instagram Clone - social media application )                                                                                          Live || Code
 - Pixabee is a Next.js based social media application, inspired from Instagram.
 
+# Live https://pixababee.vercel.app/
+
 # Features
 - Google Login.
 - Only logged users can create posts, and upload photos.
